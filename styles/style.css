@@ -1,0 +1,148 @@
+html {
+  background-color: #595f96;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  list-style-type: none;
+  overflow: hidden; /* um comando necessário, mas que não entendi como funciona :( */
+  background-color: #cd4d00;
+}
+
+.header li {
+  float: right;
+}
+
+.header li a {
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-stretch: semi-condensed;
+  color: white;
+  display: block;
+  padding: 14px 15px;
+  text-decoration: none;
+}
+
+.header li a:hover {
+  background-color: #b94500;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.usuario {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+img {
+  max-width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.turma {
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  color: white;
+  text-align: right;
+  margin: 0px 15px 5px;
+}
+
+.divturma {
+ width: 100%;
+ position: fixed;
+ bottom: 0px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #d8d8d8;
+}
+
+.footer div {
+  display: flex; /* além de "grudar" a caixa com o botão, foi o único comando no qual consegui centralizar o div dentro do rodapé, tanto horizontalmente quanto verticalmente, tentei também position e margin de vááárias maneiras, sem sucesso. */
+  height: 130px;
+  align-items: center; 
+  justify-content: center;
+}
+
+.footer input[type=text] {
+  font-size: inherit;
+  width: 280px;
+  height: 45px;
+  text-align: left;
+  box-sizing: border-box; /*faz com que o tamanho total inclua os elementos da caixa, como a borda, desse modo posso colocar a altura em 45px na caixa e no botão para terem a altura exata */
+  font-weight: bold;
+  border: 1px solid gray;
+}
+
+.footer input[type=submit] {
+  font-size: inherit;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  background-color: #cd4d00;
+  height: 45px;
+  color: white;
+  border: 1px solid gray;
+  float: right;
+  -webkit-appearance: none;
+}
+
+.footer input[type=submit]:hover {
+  background-color: #b94500;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 400px) { /*"media" só rodará o código entre chaves se a próxima afirmação for true */
+  
+  .header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  }
+
+  .header li {
+  float: none;
+  }
+
+  .header li a {
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 12px;
+  }
+
+  h1 {
+  margin-top: 80px;
+  }
+
+  img {
+  width: 100%;
+  margin-top: 0px;
+  }
+
+  .footer input[type=text] {
+  width: 260px;
+  }
+}
